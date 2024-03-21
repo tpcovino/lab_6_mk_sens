@@ -1,2 +1,2 @@
-# lab_7_mk_sens
+# climate_trends
 MK trend test and Sen's slope of climate data
