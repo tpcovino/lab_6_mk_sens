@@ -1,12 +1,12 @@
 ---
 title: "Climate trends"
 author: "Tim Covino"
-date: "2023-03-29"
+date: 
 output: html_document
 ---
 
-# Lab 7 - climate trend analysis
-Due Friday 4/14/2023; 15 pts total
+# Lab 6 - climate trend analysis
+Due Friday 3/29/2024; 15 pts total
 
 In this lab you are going to work with weather / climate data from the MSU weather station that has data from 1892 - now. You will use the Mann-Kendall test to determine if there are significant trends in various climate data and will also calculate the slope of any trend using the Sens's slope. 
 
@@ -39,7 +39,6 @@ We will use the packages below. You will need to install the rnoaa package for d
 ```{r}
 library(tidyverse)
 library(plotly)
-library(lubridate)
 library(rnoaa) # for downloading data from GHCN
 library(trend) # for Mann-Kendall trend analysis and Sen's slope
 
@@ -48,7 +47,7 @@ library(trend) # for Mann-Kendall trend analysis and Sen's slope
 ```{r}
 site <- "USC00241044"
 vars <- c("prcp", "tmax", "tmin")
-end <- as_date("2022-09-30")
+end <- as_date("2023-09-30")
 ```
 
 ### Data download, exploration and cleaning 
@@ -151,7 +150,13 @@ Both apply and map return a list. "A list in R can contain many different data t
 
 Here is a link with information about lists and how to access elements within the list <https://data-flair.training/blogs/r-list-tutorial/>
 
-Chapters 19 & 21 in RDS are both very useful resources for functions and iteration (e.g., apply, map). 
+The functions and iteration chapters in RDS are both very useful resources for functions and iteration (e.g., apply, map). 
+
+[Link to RDS 1st edition](https://r4ds.had.co.nz/index.html){target="_blank"}
+
+[Link to RDS 2nd edition](https://r4ds.hadley.nz/){target="_blank"}
+
+The functions and iteration chapters in each are useful. 
 
 In the next class I will show a tutorial on apply, map and pulling information from lists. But you should work with a partner to test them out and see what they do.  
 ```{r}
